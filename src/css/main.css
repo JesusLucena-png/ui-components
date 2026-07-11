@@ -70,5 +70,10 @@
 /* ========= Success ========= */
 /* ========= Primary Scale ========= */
 /* ========= Navy ========= */
+#content-title {
+  width: 10px;
+  height: 100px;
+  background-color: aqua;
+}
 
 /*# sourceMappingURL=main.css.map */
