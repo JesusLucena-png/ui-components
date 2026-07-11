@@ -1,0 +1,19 @@
+@use "../components/1_ContentTitle/ContentTitle";
+@use "../components/2_Botones/Botones";
+@use "../components/3_Input/Input";
+@use "../components/4_Select/Select";
+@use "../components/5_Search/Search";
+@use "../components/6_Table/Table";
+@use "../components/7_Paginador/Paginador";
+@use "../components/8_PerfilUsuario/PerfilUsuario";
+@use "../components/9_TarjetaEstadistica/TarjetaEstadistica";
+@use "../components/10_TarjetaAsistencia/TarjetaAsistencia";
+@use "../components/11_TarjetaNoticia/TarjetaNoticia";
+@use "../components/12_Portada/Portada";
+@use "../components/13_VistaGrupo/VistaGrupo";
+@use "../components/14_CalendarioSemanal/CalendarioSemanal";
+@use "../components/15_TablaHorario/TablaHorario";
+@use "../components/16_DescargaBoletines/DescargaBoletines";
+@use "../components/18_ApartadoTarea/ApartadoTarea";
+
+@use "./_Colores";

@@ -1,0 +1,205 @@
+@mixin size($width, $height: $width) {
+    width: $width;
+
+    @if $height != null {
+        height: $height;
+    }
+}
+
+@mixin max-size($width:null,$height:null){
+
+    @if $width{
+        max-width:$width;
+    }
+
+    @if $height{
+        max-height:$height;
+    }
+
+}
+
+@mixin min-size($width:null,$height:null){
+
+    @if $width{
+        min-width:$width;
+    }
+
+    @if $height{
+        min-height:$height;
+    }
+
+}
+
+@mixin flex(
+    $direction:row,
+    $justify:center,
+    $align:center,
+    $gap:0,
+    $wrap:nowrap
+){
+
+    display:flex;
+
+    flex-direction:$direction;
+
+    justify-content:$justify;
+
+    align-items:$align;
+
+    gap:$gap;
+
+    flex-wrap:$wrap;
+
+}
+
+@mixin center{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+@mixin column(
+    $justify:flex-start,
+    $align:flex-start,
+    $gap:0
+){
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:$justify;
+
+    align-items:$align;
+
+    gap:$gap;
+
+}
+
+@mixin grid(
+    $columns:1fr,
+    $gap:1rem
+){
+
+    display:grid;
+
+    grid-template-columns:$columns;
+
+    gap:$gap;
+
+}
+
+@mixin auto-grid(
+    $min:250px,
+    $gap:1rem
+){
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax($min,1fr));
+
+    gap:$gap;
+
+}
+
+@mixin position(
+    $type:relative,
+    $top:null,
+    $right:null,
+    $bottom:null,
+    $left:null
+){
+
+    position:$type;
+
+    top:$top;
+
+    right:$right;
+
+    bottom:$bottom;
+
+    left:$left;
+
+}
+
+@mixin overflow(
+    $x:hidden,
+    $y:$x
+){
+
+    overflow-x:$x;
+
+    overflow-y:$y;
+
+}
+
+@mixin text(
+    $size,
+    $weight:400,
+    $line:normal,
+    $align:left
+){
+
+    font-size:$size;
+
+    font-weight:$weight;
+
+    line-height:$line;
+
+    text-align:$align;
+
+}
+
+@mixin transition(
+    $property:all,
+    $time:.3s,
+    $type:ease
+){
+
+    transition:$property $time $type;
+
+}
+
+@mixin scrollbar(
+    $size:8px,
+    $thumb:var(--primary),
+    $track:transparent
+){
+
+    &::-webkit-scrollbar{
+
+        width:$size;
+
+        height:$size;
+
+    }
+
+    &::-webkit-scrollbar-thumb{
+
+        background:$thumb;
+
+        border-radius:100px;
+
+    }
+
+    &::-webkit-scrollbar-track{
+
+        background:$track;
+
+    }
+
+}
+
+@mixin ellipsis{
+
+    white-space:nowrap;
+
+    overflow:hidden;
+
+    text-overflow:ellipsis;
+
+}
