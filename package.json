@@ -1,25 +1,5 @@
 {
-  "name": "ui-components",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "scss": "sass --watch src/scss/main.scss:src/css/main.css",
-    "build": "sass src/scss:src/css --style=compressed"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JesusLucena-png/ui-components.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/JesusLucena-png/ui-components/issues"
-  },
-  "homepage": "https://github.com/JesusLucena-png/ui-components#readme",
   "devDependencies": {
-    "sass": "^1.93.0"
+    "sass": "^1.101.0"
   }
 }

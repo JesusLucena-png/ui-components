@@ -1,0 +1,255 @@
+/* ==========================================================
+   ANIMATIONS
+   Variables globales para animaciones.
+========================================================== */
+
+
+/* ==========================================================
+   DURACIÓN
+========================================================== */
+
+$animation-fast: .15s;
+$animation-normal: .3s;
+$animation-slow: .5s;
+$animation-extra: .8s;
+
+
+/* ==========================================================
+   DELAY
+========================================================== */
+
+$delay-fast: .1s;
+$delay-normal: .25s;
+$delay-slow: .5s;
+
+
+/* ==========================================================
+   TIMING FUNCTIONS
+========================================================== */
+
+$ease: ease;
+$ease-in: ease-in;
+$ease-out: ease-out;
+$ease-in-out: ease-in-out;
+$linear: linear;
+
+
+/* ==========================================================
+   KEYFRAMES
+========================================================== */
+
+/* Fade */
+
+@keyframes fade-in {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+@keyframes fade-out {
+
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+
+}
+
+
+/* Scale */
+
+@keyframes scale-in {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+@keyframes scale-out {
+
+    from {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+    to {
+
+        opacity: 0;
+
+        transform: scale(.95);
+
+    }
+
+}
+
+
+/* Slide */
+
+@keyframes slide-up {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes slide-down {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(-30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+@keyframes slide-left {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+@keyframes slide-right {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(-30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+
+/* Rotate */
+
+@keyframes rotate {
+
+    from {
+
+        transform: rotate(0deg);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+
+/* Pulse */
+
+@keyframes pulse {
+
+    0% {
+
+        transform: scale(1);
+
+    }
+
+    50% {
+
+        transform: scale(1.05);
+
+    }
+
+    100% {
+
+        transform: scale(1);
+
+    }
+
+}
+
+
+/* Bounce */
+
+@keyframes bounce {
+
+    0%,
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-8px);
+
+    }
+
+}
