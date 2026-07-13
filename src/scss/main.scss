@@ -18,9 +18,8 @@
 
 @use "abstracts/colores";
 @use "abstracts/mixin";
-@use "abstracts/shadows";
 @use "abstracts/variables";
-@use "abstracts/animations";
+@use "abstracts/tipografias";
 
 *{
     padding: 0%;
@@ -28,3 +27,4 @@
 
     box-sizing: border-box;
 }
+

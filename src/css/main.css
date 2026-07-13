@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 :root {
   /* ========= Base ========= */
   --text: rgb(29, 21, 81);
@@ -72,366 +72,341 @@
 /* ========= Primary Scale ========= */
 /* ========= Navy ========= */
 /* ==========================================================
-   MIXIN: SIZE
-   Define el ancho y alto del elemento.
-   Si no se especifica el alto, toma el mismo valor del ancho.
-
-   Ejemplos:
-   @include size(100px);
-   @include size(200px, 80px);
-========================================================== */
-/* ==========================================================
-   MIXIN: MAX-SIZE
-   Define el ancho y/o alto máximo.
-
-   Ejemplos:
-   @include max-size(500px);
-   @include max-size(500px, 300px);
-========================================================== */
-/* ==========================================================
-   MIXIN: MIN-SIZE
-   Define el ancho y/o alto mínimo.
-
-   Ejemplos:
-   @include min-size(250px);
-   @include min-size(250px,150px);
-========================================================== */
-/* ==========================================================
-   MIXIN: FLEX
-   Crea un contenedor Flexbox completamente configurable.
-
-   Parámetros:
-   direction : row | column
-   justify   : justify-content
-   align     : align-items
-   gap       : separación
-   wrap      : nowrap | wrap
-
-   Ejemplos:
-   @include flex();
-   @include flex(column);
-   @include flex(row,space-between,center,1rem);
-========================================================== */
-/* ==========================================================
-   MIXIN: CENTER
-   Centra horizontal y verticalmente utilizando Flexbox.
-
-   Ejemplo:
-   @include center;
-========================================================== */
-/* ==========================================================
-   MIXIN: COLUMN
-   Crea un Flexbox en columna.
-
-   Ejemplos:
-   @include column();
-   @include column(center,center,1rem);
-========================================================== */
-/* ==========================================================
-   MIXIN: GRID
-   Crea un Grid con columnas personalizadas.
-
-   Ejemplos:
-   @include grid();
-   @include grid(1fr 1fr);
-   @include grid(repeat(4,1fr),2rem);
-========================================================== */
-/* ==========================================================
-   MIXIN: AUTO-GRID
-   Grid responsive automático.
-
-   Ejemplos:
-   @include auto-grid();
-   @include auto-grid(300px);
-   @include auto-grid(200px,2rem);
-========================================================== */
-/* ==========================================================
-   MIXIN: POSITION
-   Define la posición del elemento y sus coordenadas.
-
-   Ejemplos:
-   @include position();
-   @include position(absolute,0,0);
-   @include position(fixed,0,null,0,0);
-========================================================== */
-/* ==========================================================
-   MIXIN: OVERFLOW
-   Controla el desbordamiento horizontal y vertical.
-
-   Ejemplos:
-   @include overflow();
-   @include overflow(auto);
-   @include overflow(hidden,scroll);
-========================================================== */
-/* ==========================================================
-   MIXIN: TEXT
-   Configura las propiedades principales del texto.
-
-   Parámetros:
-   size
-   weight
-   line-height
-   align
-
-   Ejemplos:
-   @include text(1rem);
-   @include text(1.25rem,700,1.5,center);
-========================================================== */
-/* ==========================================================
-   MIXIN: TRANSITION
-   Crea transiciones reutilizables.
-
-   Ejemplos:
-   @include transition();
-   @include transition(opacity,.2s);
-   @include transition(transform,.4s,ease-in-out);
-========================================================== */
-/* ==========================================================
-   MIXIN: SCROLLBAR
-   Personaliza la barra de desplazamiento.
-
-   Ejemplos:
-   @include scrollbar();
-   @include scrollbar(10px,var(--secondary));
-========================================================== */
-/* ==========================================================
-   MIXIN: ELLIPSIS
-   Oculta el texto sobrante y agrega "..."
-
-   Requisitos:
-   El elemento debe tener un ancho definido.
-
-   Ejemplo:
-   @include ellipsis;
-========================================================== */
-/* ==========================================================
-   VARIABLES GLOBALES
-   Proyecto: UI Components
-   Descripción: Variables reutilizables para todo el sistema.
-========================================================== */
-/* ==========================================================
    BREAKPOINTS
 ========================================================== */
 /* ==========================================================
-   SIDEBAR
+   SPACING
 ========================================================== */
 /* ==========================================================
-   HEADER
+   FONT SIZE
+========================================================== */
+/* ==========================================================
+   FONT WEIGHT
+========================================================== */
+/* ==========================================================
+   BORDER RADIUS
+========================================================== */
+/* ==========================================================
+   COMPONENT SIZE
+========================================================== */
+/* ==========================================================
+   TRANSITIONS
+========================================================== */
+/* ==========================================================
+   OPACITY
+========================================================== */
+/* ==========================================================
+   SHADOWS
 ========================================================== */
 /* ==========================================================
    Z-INDEX
 ========================================================== */
-/* ==========================================================
-   BORDES
-========================================================== */
-/* ==========================================================
-   ESPACIADOS
-========================================================== */
-/* ==========================================================
-   TAMAÑOS DE ICONOS
-========================================================== */
-/* ==========================================================
-   AVATAR
-========================================================== */
-/* ==========================================================
-   BOTONES
-========================================================== */
-/* ==========================================================
-   INPUTS
-========================================================== */
-/* ==========================================================
-   TRANSICIONES
-========================================================== */
-/* ==========================================================
-   OPACIDADES
-========================================================== */
-/* ==========================================================
-   SOMBRAS
-========================================================== */
-/* ==========================================================
-   GRID
-========================================================== */
-/* ==========================================================
-   CONTENEDORES
-========================================================== */
-/* ==========================================================
-   ANIMACIONES
-========================================================== */
-/* ==========================================================
-   SCROLLBAR
-========================================================== */
-/* ==========================================================
-   CALENDARIO
-========================================================== */
-/* ==========================================================
-   TABLAS
-========================================================== */
-/* ==========================================================
-   FORMULARIOS
-========================================================== */
-/* ==========================================================
-   TARJETAS
-========================================================== */
-/* ==========================================================
-   PAGINACIÓN
-========================================================== */
-/* ==========================================================
-   MODALES
-========================================================== */
-/* ==========================================================
-   LOADER
-========================================================== */
-/* ==========================================================
-   ANIMATIONS
-   Variables globales para animaciones.
-========================================================== */
-/* ==========================================================
-   DURACIÓN
-========================================================== */
-/* ==========================================================
-   DELAY
-========================================================== */
-/* ==========================================================
-   TIMING FUNCTIONS
-========================================================== */
-/* ==========================================================
-   KEYFRAMES
-========================================================== */
-/* Fade */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  gap: 20px;
+  background-color: var(--gray-200);
 }
-@keyframes fade-out {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  gap: 100px;
 }
-/* Scale */
-@keyframes scale-in {
-  from {
-    opacity: 0;
-    transform: scale(0.95);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
+
+.btn1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 6px;
+  background: var(--white);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  cursor: pointer;
 }
-@keyframes scale-out {
-  from {
-    opacity: 1;
-    transform: scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: scale(0.95);
-  }
+.btn1 i {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1;
 }
-/* Slide */
-@keyframes slide-up {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.btn1 span {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
 }
-@keyframes slide-down {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
+.btn2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: auto;
+  padding: 16px;
+  gap: 6px;
+  background: var(--primary);
+  color: var(--white);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
 }
-@keyframes slide-left {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.btn2 i {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1;
 }
-@keyframes slide-right {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.btn2 span {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
 }
-/* Rotate */
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.btn3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+  gap: 6px;
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
 }
-/* Pulse */
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
+.btn3 i {
+  display: block;
+  font-size: 0.875rem;
+  line-height: 1;
 }
-/* Bounce */
-@keyframes bounce {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+.btn3 span {
+  display: block;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1;
 }
-/* ==========================================================
-   SHADOWS
-   Sombras reutilizables para componentes UI.
-========================================================== */
-/* ==========================================================
-   SHADOW: EXTRA SMALL
-========================================================== */
-/* ==========================================================
-   SHADOW: SMALL
-========================================================== */
-/* ==========================================================
-   SHADOW: MEDIUM
-========================================================== */
-/* ==========================================================
-   SHADOW: LARGE
-========================================================== */
-/* ==========================================================
-   SHADOW: EXTRA LARGE
-========================================================== */
-/* ==========================================================
-   SHADOW: FLOATING
-   Ideal para modales, dropdowns y menús.
-========================================================== */
-/* ==========================================================
-   SHADOW: INSET
-========================================================== */
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  gap: 20px;
+  background-color: var(--gray-200);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+  height: 80%;
+  gap: 100px;
+}
+
+#Select {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+#Select .select-trigger {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 9px 16px;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  background: var(--white);
+  color: var(--gray-200);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#Select .select-trigger i {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+#Select .select-trigger span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+#Select .select-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: var(--white);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+#Select .select-menu .select-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 9px 16px;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: background 0.15s ease;
+}
+#Select .select-menu .select-item:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+#Select .select-menu .select-item span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#Select.active {
+  z-index: 100;
+}
+#Select.active .select-menu {
+  overflow-y: auto;
+  max-height: 150px;
+  opacity: 1;
+  visibility: visible;
+}
+#Select.active .select-trigger > i {
+  transform: rotate(180deg);
+}
+
+#Select2 {
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+#Select2 .select-trigger {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 9px 16px;
+  border: 1px solid var(--primary);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--gray-200);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#Select2 .select-trigger i {
+  font-size: 1rem;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+#Select2 .select-trigger span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+#Select2 .select-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: var(--white);
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+#Select2 .select-menu .select-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 9px 16px;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-size: 0.875rem;
+  font-weight: 400;
+  transition: background 0.15s ease;
+}
+#Select2 .select-menu .select-item:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+#Select2 .select-menu .select-item span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+#Select2.active {
+  z-index: 100;
+}
+#Select2.active .select-menu {
+  overflow-y: auto;
+  max-height: 150px;
+  opacity: 1;
+  visibility: visible;
+}
+#Select2.active .select-trigger > i {
+  transform: rotate(180deg);
+}
+
 * {
   padding: 0%;
   margin: 0%;
