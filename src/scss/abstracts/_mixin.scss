@@ -23,7 +23,3 @@
     width: $width;
     height: $height;
 }
-
-@mixin radius($radius: $radius-md) {
-    border-radius: $radius;
-}

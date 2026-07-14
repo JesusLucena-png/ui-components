@@ -156,10 +156,10 @@ main{
     );
 }
 
-.btn2{
+.btn-primary{
     @include button-size(
-        80vw,
-        16px,
+        100%,
+        8px,
         6px,
         $primary,
         $white,
@@ -171,7 +171,3 @@ main{
     );
 }
 
-.btn3{
-    @include button((16px),(6px),($primary),($white),($radius-md),($font-sm),($font-xs));
-
-}
