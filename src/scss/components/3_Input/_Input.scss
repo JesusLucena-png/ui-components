@@ -1,0 +1,277 @@
+@use "../../abstracts/colores" as *;
+@use "../../abstracts/mixin" as *;
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/tipografias" as *;
+
+
+//==================================================
+// PÁGINA
+//==================================================
+
+.table-page {
+    @include flex();
+    @include size(100%, 100vh);
+
+    background: $gray-light;
+
+    //==================================================
+    // CONTENEDOR PRINCIPAL
+    //==================================================
+
+    .table-layout {
+        display: flex;
+        @include size(70%, auto);
+
+        padding: 1rem;
+
+        //==================================================
+        // CONTENIDO
+        //==================================================
+
+        .table-content {
+            display: flex;
+            flex-direction: column;
+
+            @include size(100%, auto);
+            gap: 2rem;
+
+            //==============================================
+            // CABECERA
+            //==============================================
+
+            .table-header-title {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                // Título
+                .table-title {
+                    color: $primary-light;
+
+                    font-family: $font-tre;
+                    font-size: 35px;
+                    font-weight: 900;
+
+                    text-transform: capitalize;
+                }
+
+                // Botón
+                .table-header-action {
+
+                    .table-add-button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        padding: .5rem 1rem;
+                        gap: .6rem;
+
+                        background: $primary-light;
+
+                        border: none;
+                        border-radius: $radius-pill;
+
+                        font-family: $font-primary;
+                        font-size: $font-md;
+                        font-weight: 500;
+
+                        color: $white;
+                        text-transform: capitalize;
+
+                        cursor: pointer;
+
+                        transition: transform $transition-normal ease;
+
+                        &:hover {
+                            transform: scale(1.02) translateY(3px);
+                        }
+                    }
+                }
+            }
+
+            //==============================================
+            // TOTAL DE REGISTROS
+            //==============================================
+
+            .table-total {
+                display: flex;
+                align-items: center;
+                gap: .3rem;
+
+                font-family: $font-primary;
+                font-size: $font-md;
+                font-weight: 500;
+
+                color: $primary-light;
+
+                .table-total-label {
+                    display: flex;
+                    align-items: center;
+                    gap: .4rem;
+
+                    color: $gray-dark;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        //==================================================
+        // TARJETA
+        //==================================================
+
+        .table-card {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        //==================================================
+        // BARRA DE HERRAMIENTAS
+        //==================================================
+
+        .table-toolbar {
+            display: flex;
+            gap: .5rem;
+
+            .table-filter {
+                padding: .5rem;
+
+                border: 1px solid $gray;
+                border-radius: $radius-pill;
+
+                box-shadow: 0 0 2px rgba(84, 84, 84, .3);
+
+                color: $primary;
+
+                cursor: pointer;
+
+                transition:
+                    border-color $transition-fast ease,
+                    box-shadow $transition-fast ease;
+
+                &:hover {
+                    border-color: $primary-light;
+                    box-shadow: 0 0 0 2px rgba(0, 0, 255, .2);
+                }
+            }
+        }
+
+        //==================================================
+        // TABLA
+        //==================================================
+
+        .table-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        //==================================================
+        // PAGINADOR
+        //==================================================
+
+        .table-pagination {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .pagination {
+                display: flex;
+                align-items: center;
+                gap: .5rem;
+
+                user-select: none;
+
+                //==========================================
+                // BOTONES IZQUIERDA
+                //==========================================
+
+                .pagination-left {
+                    display: flex;
+                    align-items: center;
+                    gap: .2rem;
+
+                    i {
+                        padding: 16px 8px;
+
+                        background: transparent;
+                        border-radius: $radius-pill;
+
+                        line-height: 0;
+                        color: $primary;
+
+                        cursor: pointer;
+
+                        transition:
+                            transform $transition-normal ease,
+                            background-color $transition-normal ease;
+
+                        &:hover {
+                            transform: scale(1.02) translateY(-3px);
+                            background: $gray;
+                        }
+                    }
+
+                    .bx-flip-horizontal {
+                        transform: scaleX(-1);
+                    }
+                }
+
+                //==========================================
+                // INFORMACIÓN
+                //==========================================
+
+                .pagination-info {
+                    display: flex;
+                    align-items: center;
+                    gap: .4rem;
+
+                    font-family: $font-primary;
+                    font-size: $font-md;
+                    font-weight: 500;
+
+                    color: $primary;
+
+                    .pagination-current,
+                    .pagination-total {
+                        color: $gray-dark;
+                    }
+                }
+
+                //==========================================
+                // BOTONES DERECHA
+                //==========================================
+
+                .pagination-right {
+                    display: flex;
+                    align-items: center;
+                    gap: .2rem;
+
+                    i {
+                        padding: 16px 8px;
+
+                        background: transparent;
+                        border-radius: $radius-pill;
+
+                        line-height: 0;
+                        color: $primary;
+
+                        cursor: pointer;
+
+                        transition:
+                            transform $transition-normal ease,
+                            background-color $transition-normal ease;
+
+                        &:hover {
+                            transform: scale(1.02) translateY(-3px);
+                            background: $gray;
+                        }
+                    }
+
+                    .bx-flip-horizontal {
+                        transform: scaleX(-1);
+                    }
+                }
+            }
+        }
+    }
+}

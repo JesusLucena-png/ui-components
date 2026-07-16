@@ -1,1 +1,0 @@
-// ContentTitle component

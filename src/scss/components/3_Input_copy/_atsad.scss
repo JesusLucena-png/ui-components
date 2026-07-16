@@ -1,0 +1,212 @@
+@use "../../abstracts/colores" as *;
+@use "../../abstracts/mixin" as *;
+@use "../../abstracts/variables" as *;
+@use "../../abstracts/tipografias" as *;
+
+//==================================================
+// PÁGINA
+//==================================================
+
+.form-page{
+    @include flex();
+    @include size(100%,100vh);
+
+    background:$gray-light;
+
+    //==============================================
+    // CONTENEDOR
+    //==============================================
+
+    .form-layout{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+
+        @include size(80%,auto);
+
+        padding:2.5rem;
+        gap:1rem;
+
+        background:$white;
+
+        //==========================================
+        // CABECERA
+        //==========================================
+
+        .form-header{
+            @include flex-center;
+
+            position:relative;
+
+            @include size(50%,auto);
+
+            .form-progress{
+                position:relative;
+                width:100%;
+            }
+
+            //======================================
+            // PASOS
+            //======================================
+
+            .form-header-top{
+                @include flex-center;
+
+                justify-content:space-between;
+
+                @include size(100%,100px);
+
+                position:absolute;
+                inset:0;
+
+                .step{
+                    @include flex-center;
+
+                    padding:.5rem;
+
+                    background:$blue-dark;
+
+                    border-radius:$radius-pill;
+
+                    color:$white;
+
+                    font-size:$font-lg;
+
+                    line-height:1;
+
+                    z-index:2;
+                }
+
+                .active{
+                    background:$primary;
+                }
+            }
+
+            //======================================
+            // BARRA DE PROGRESO
+            //======================================
+
+            .form-header-bottom{
+                @include flex-center;
+
+                height:100px;
+            }
+
+            .progress-track{
+                position:relative;
+
+                width:100%;
+                height:5px;
+
+                border-radius:$radius-pill;
+
+                background:$blue-light;
+
+                overflow:hidden;
+            }
+
+            .progress-bar{
+                width:35%;
+                height:100%;
+
+                background:$blue;
+            }
+        }
+
+        //==========================================
+        // TARJETAS
+        //==========================================
+
+        .form-card{
+            @include flex-column;
+
+            @include size(100%,auto);
+
+            padding:1rem;
+
+            background:$gray-light;
+
+            border-radius:$radius-lg;
+
+            //======================================
+            // TÍTULO
+            //======================================
+
+            .card-header{
+                width:100%;
+
+                padding:.5rem 0;
+
+                font-family:$font-primary;
+                font-size:$font-md;
+                font-weight:600;
+
+                text-transform:capitalize;
+            }
+
+            //======================================
+            // CONTENIDO
+            //======================================
+
+            .card-body{
+                display:flex;
+                gap:2rem;
+
+                .student-form{
+                    display:grid;
+                    grid-template-columns:repeat(2,1fr);
+                    gap:1rem;
+
+                    flex:1;
+                }
+
+                .student-photo{
+                    @include flex-center;
+                    flex-direction:column;
+                }
+
+                //==================================
+                // CAMPOS
+                //==================================
+
+                .form-group{
+                    @include flex-column;
+
+                    gap:.5rem;
+
+                    label{
+                        font-family:$font-primary;
+                        font-size:$font-sm;
+                        font-weight:500;
+
+                        text-transform:capitalize;
+                    }
+
+                    input,
+                    select{
+                        padding:.4rem .8rem;
+
+                        border:1px solid $gray;
+                        border-radius:$radius-pill;
+
+                        box-shadow:0 0 2px rgba(84,84,84,.3);
+
+                        color:$primary;
+
+                        transition:
+                        border-color $transition-fast ease,
+                        box-shadow $transition-fast ease;
+
+                        &:focus{
+                            outline:none;
+
+                            border-color:$primary-light;
+
+                            box-shadow:0 0 0 2px rgba(0,0,255,.2);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
